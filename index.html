@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Integer</title>
+</head>
+<body>
+    <label for="integer1">Integer 1:</label>
+    <input type="number" id="integer1" name="integer1"><br><br>
+    
+    <label for="integer2">Integer 2:</label>
+    <input type="number" id="integer2" name="integer2"><br><br>
+
+    <button onclick="calculateSum()">Hitung Jumlah</button>
+
+    <p id="result"></p>
+
+ 
+</body>
+<script>
+	function calculateSum() {
+            // Mengambil nilai dari kedua input
+            var integer1 = parseInt(document.getElementById("integer1").value);
+            var integer2 = parseInt(document.getElementById("integer2").value);
+
+            // Memeriksa apakah kedua input adalah angka valid
+            if (!isNaN(integer1) && !isNaN(integer2)) {
+                var sum = integer1 + integer2;
+                document.getElementById("result").innerHTML = "Jumlah: " + sum;
+            } else {
+                document.getElementById("result").innerHTML = "Masukkan angka yang valid di kedua input.";
+            }
+        }
+</script>
+</html>
